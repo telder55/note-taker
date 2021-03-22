@@ -4,13 +4,14 @@ const fs = require('fs');
 
 
 
-module.exports = (app) => {
 
+
+module.exports = (app) => {
     app.post('/api/notes', (req, res) => {
         // console.log(noteData);
-        console.log(req.body)
+        // console.log(req.body)
         noteData.push(req.body)
-        console.log(noteData);
+        // console.log(noteData);
         fs.readFile((__dirname + '/../db/db.json'), 'utf8' , (err, data) => {
             if (err) {
               console.error(err)
@@ -23,7 +24,6 @@ module.exports = (app) => {
                 }
                 console.log("File written");
               })
-            console.log(data)
           })
 
         // console.log(req.body);
@@ -31,6 +31,7 @@ module.exports = (app) => {
 
     })
 
+    // Gets Note from database and sends to left side of page
     app.get('/api/notes', (req, res) => {
         // console.log(noteData);
         res.json(noteData)

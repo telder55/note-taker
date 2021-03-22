@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 // UUID
 const { v4: uuidv4 } = require('uuid');
 uuidv4();
-console.log(uuidv4());
+// console.log(uuidv4());
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
