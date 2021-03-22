@@ -64,7 +64,7 @@ const renderActiveNote = () => {
     noteTitle.value = '';
     noteText.value = '';
     // console.log("renderActiveNote else ran");
-    // Added by TJ to remove readonly when writing a new note. 
+    // Added by TJ to remove readonly when clicking new note button. 
     noteTitle.removeAttribute('readonly', true);
     noteText.removeAttribute('readonly', true);
 
@@ -75,7 +75,7 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
-    id: 5
+    id: ''
   };
   saveNote(newNote).then(() => {
     getAndRenderNotes();
