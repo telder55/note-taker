@@ -8,6 +8,12 @@ This app allows the user to write down quick notes and have them stored to view 
 * [License](#license)
 * [Questions](#questions)
 
+## Screenshot
+![Alt text](public/assets/images/note-taker-homepage.png?raw=true "Note Taker Homepage")
+
+![Alt text](public/assets/images/note-taker-notespage.png?raw=true "Note Taker Notes Page")
+
+
 ## License 
 MIT License
 
