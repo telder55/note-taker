@@ -33,16 +33,14 @@ const getNotes = () =>
     },
   });
 
-const saveNote = (note) => {
-  console.log(note)
-  return fetch('/api/notes', {
+const saveNote = (note) =>
+  fetch('/api/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
   });
-}
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -71,14 +69,12 @@ const handleNoteSave = () => {
     title: noteTitle.value,
     text: noteText.value,
   };
-  console.log('new note here/////////////////', newNote);
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
   });
 };
 
-// Checkout UUID node dependency from Mitch
 // Delete the clicked note
 const handleNoteDelete = (e) => {
   // prevents the click listener for the list from being called when the button inside of it is clicked
@@ -126,7 +122,7 @@ const renderNoteList = async (notes) => {
   }
 
   let noteListItems = [];
-  // add data attribute data-
+
   // Returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
